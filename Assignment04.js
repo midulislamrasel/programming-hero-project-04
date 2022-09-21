@@ -98,3 +98,29 @@ function publicBusFare(totalPeople) {
 }
 
 console.log(publicBusFare(117));
+
+// 0.5: isBestFriend
+
+const bestFriend = [
+
+    { name: 'zabu', friend: 'habu' },
+    { name: 'habu', friend: 'zabu' }
+];
+
+function isBestFriend(bestFriend) {
+
+    let best1 = bestFriend[0];
+    let best2 = bestFriend[1];
+
+    if (best1.name === best2.friend) {
+        return true
+    }
+    else {
+        return false;
+    }
+
+}
+
+const closeFriend = isBestFriend(bestFriend);
+console.log(closeFriend);
+
