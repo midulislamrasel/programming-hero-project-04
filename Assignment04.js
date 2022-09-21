@@ -69,3 +69,32 @@ function oilPrice(diesel,
 
 const totalOil = oilPrice(5, 3, 6);
 console.log(totalOil);
+
+
+
+// 0.4: publicBusFare
+
+function publicBusFare(totalPeople) {
+    let chekUnDefined = typeof totalPeople;
+    if (chekUnDefined === "undefined") {
+        return "Please Enter a Valid Input";
+    } else {
+        let publicBusCost = 0;
+        let tPeople = totalPeople;
+        if (tPeople >= 50) {
+            tPeople = tPeople % 50;
+        }
+
+        if (tPeople >= 11) {
+            tPeople = tPeople % 11;
+        }
+
+        if (tPeople < 11) {
+            publicBusCost = tPeople * 250;
+        }
+
+        return publicBusCost;
+    }
+}
+
+console.log(publicBusFare(117));
